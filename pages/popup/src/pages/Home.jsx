@@ -191,13 +191,13 @@ const Home = () => {
         sx={{
           minWidth: '200px',
           height: '35px',
-          backgroundColor: '#D9D9D9',
+          backgroundColor: '#2f9db1eb',
           color: '#000',
           textTransform: 'none',
           borderRadius: '12px',
           fontWeight: 600,
           '&:hover': {
-            backgroundColor: '#D9D9D960',
+            backgroundColor: '#2f9db1cf',
           },
         }}>
         Synchronize
