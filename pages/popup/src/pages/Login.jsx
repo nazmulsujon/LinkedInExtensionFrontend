@@ -68,13 +68,15 @@ const Login = () => {
       gap={2}
       px={2}>
       <Box display="flex" alignItems="center" gap={1} width="100%">
-        <AutoAwesomeRoundedIcon sx={{ color: 'blue' }} />
-        <Typography variant="h6">AlgoClan AI</Typography>
+        <AutoAwesomeRoundedIcon fontSize="large" sx={{ color: 'blue' }} />
+        <Typography variant="h6" sx={{ fontSize: '16px', fontWeight: '600' }}>
+          AlgoClan AI
+        </Typography>
       </Box>
 
       <Box width="100%">
-        <Typography fontSize="12px" display="flex" alignItems="center">
-          <EmailIcon fontSize="small" style={{ marginRight: '4px' }} />
+        <Typography fontSize="13px" fontWeight="500" display="flex" alignItems="center">
+          <EmailIcon fontSize="medium" style={{ marginRight: '4px' }} />
           Email
         </Typography>
         <CustomTextField
@@ -85,8 +87,8 @@ const Login = () => {
           onChange={e => setEmail(e.target.value)}
           size="small"
         />
-        <Typography fontSize="12px" display="flex" alignItems="center" mt={1}>
-          <LockIcon fontSize="small" style={{ marginRight: '4px' }} />
+        <Typography fontSize="13px" fontWeight="500" display="flex" alignItems="center" mt={1}>
+          <LockIcon fontSize="medium" style={{ marginRight: '4px' }} />
           Password
         </Typography>
         <CustomTextField
@@ -104,10 +106,14 @@ const Login = () => {
         onClick={login}
         sx={{
           minWidth: '200px',
-          backgroundColor: '#0097b4',
+          backgroundColor: '#2f9db1eb',
+          color: '#fff',
           textTransform: 'none',
+          borderRadius: '12px',
+          fontSize: '14px',
+          fontWeight: 600,
           '&:hover': {
-            backgroundColor: '#21879a',
+            backgroundColor: '#2f9db1cf',
           },
         }}>
         {loading ? <CircularProgress color="inherit" size={18} /> : 'Login'}

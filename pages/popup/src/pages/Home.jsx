@@ -33,7 +33,7 @@ const BorderLinearProgress = styled(LinearProgress)(() => ({
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: '#0097b4',
+    backgroundColor: '#2f9db1cf',
   },
 }));
 
@@ -102,8 +102,10 @@ const Home = () => {
       px={2}>
       <Box width="100%" display="flex" alignItems="center" justifyContent="space-between">
         <Box display="flex" alignItems="center" gap={1} width="100%">
-          <AutoAwesomeRoundedIcon sx={{ color: 'blue' }} />
-          <Typography variant="h6">AlgoClan AI</Typography>
+          <AutoAwesomeRoundedIcon fontSize="large" sx={{ color: 'blue' }} />
+          <Typography variant="h6" sx={{ fontSize: '16px', fontWeight: '600' }}>
+            AlgoClan AI
+          </Typography>
         </Box>
         <Box position="relative">
           <IconButton
@@ -139,8 +141,10 @@ const Home = () => {
       </Box>
 
       <Box width="100%">
-        <Typography fontSize="14px">Credits: {authInfo?.availableRequest}</Typography>
-        <BorderLinearProgress variant="determinate" value={value} />
+        <Typography fontSize="14px" fontWeight="600">
+          Credits: {authInfo?.availableRequest}
+        </Typography>
+        <BorderLinearProgress variant="determinate" value={value} sx={{ color: '#2f9db1eb' }} />
       </Box>
       <Box
         sx={{
@@ -152,8 +156,8 @@ const Home = () => {
           borderRadius: '12px',
           width: '100%',
         }}>
-        <Typography fontSize="12px" display="flex" alignItems="center" ml={1}>
-          <GroupsOutlinedIcon fontSize="small" style={{ marginRight: '8px' }} />
+        <Typography fontSize="13px" fontWeight="500" display="flex" alignItems="center" ml={1}>
+          <GroupsOutlinedIcon fontSize="medium" style={{ marginRight: '8px' }} />
           Personas: {authInfo?.personaCount}
         </Typography>
         <IconButton
@@ -172,8 +176,14 @@ const Home = () => {
           borderRadius: '12px',
           width: '100%',
         }}>
-        <Typography fontSize="12px" display="flex" alignItems="center" ml={1} textTransform="capitalize">
-          <Diversity2OutlinedIcon fontSize="small" style={{ marginRight: '8px' }} />
+        <Typography
+          fontSize="13px"
+          fontWeight="500"
+          display="flex"
+          alignItems="center"
+          ml={1}
+          textTransform="capitalize">
+          <Diversity2OutlinedIcon fontSize="medium" style={{ marginRight: '8px' }} />
           Plan: {authInfo?.status}
         </Typography>
         <IconButton
@@ -185,16 +195,17 @@ const Home = () => {
 
       <Button
         fullWidth
-        startIcon={<SyncIcon sx={{ color: '#000' }} />}
+        startIcon={<SyncIcon fontSize="medium" sx={{ color: '#fff' }} />}
         variant="contained"
         onClick={asyncCheck}
         sx={{
           minWidth: '200px',
           height: '35px',
           backgroundColor: '#2f9db1eb',
-          color: '#000',
+          color: '#fff',
           textTransform: 'none',
           borderRadius: '12px',
+          fontSize: '14px',
           fontWeight: 600,
           '&:hover': {
             backgroundColor: '#2f9db1cf',
